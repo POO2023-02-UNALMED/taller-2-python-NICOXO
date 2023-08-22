@@ -47,7 +47,7 @@ class Auto:
         for asiento in self.asientos:
             registro.append(asiento.registro)
 
-        if len(set(registros)) == 1:
+        if len(set(registro)) == 1:
             return "Auto original"
         else:
             return "Las piezas no son originales"
