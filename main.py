@@ -36,7 +36,7 @@ class Auto:
         Auto.cantidadCreados += 1
 
     def cantidadAsientos(self):
-        return len([asiento for asiento in self.asiento if isinstance(asiento, Asiento)])
+        return len([asientos for asientos in self.asientos if isinstance(asientos, Asiento)])
     
     def verificarIntegridad(self):
         registro = [self.registro]
