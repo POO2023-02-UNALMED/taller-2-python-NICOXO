@@ -43,11 +43,8 @@ class Auto:
             return "Las piezas no son originales (motor)"
         
         for asiento in self.asientos:
-            if asiento.registro != self.registro:
-                return "Las piezas no son originales (asiento)"
-        
-        if any(asiento.color != self.asientos[0].color for asiento in self.asientos):
-            return "Las piezas no son originales (color de asientos)"
+            if isinstance(asiento, Asiento):
+                if asiento.registro != self.registro or asiento.color != self.asientos[0].color:
+                    return "Las piezas no son originales (asiento)"
         
         return "Auto original"
-          
